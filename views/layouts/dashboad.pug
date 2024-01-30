@@ -1,0 +1,71 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Dashboard Page
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+  style.
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+    .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+    }
+    .profile {
+    text-align: center;
+    margin-bottom: 30px;
+    }
+    .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    }
+    .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    .sidebar-menu li {
+    margin-bottom: 10px;
+    }
+    .sidebar-menu li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    }
+    .content {
+    margin-left: 250px;
+    padding: 20px;
+    }
+.sidebar
+  .profile
+    //- img(src='profile.jpg' alt='Profile Picture')
+    span FPMS
+  ul.sidebar-menu
+    li
+      a(href='layout')
+        i.fas.fa-tachometer-alt
+        |  Dashboard
+    li
+      a(href='studentproject')
+        i.fas.fa-upload
+        |  Upload Project
+    li
+      a(href='viewproject')
+        i.fas.fa-eye
+        |  View Project
+.content
+  // Add your content here
+
+block content

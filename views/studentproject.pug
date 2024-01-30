@@ -1,0 +1,85 @@
+extends layouts/dashboad
+
+block content
+ doctype html
+ head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Project Submission Form
+  style.
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: auto;
+    padding: auto;
+    }
+    .form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    .input-group {
+    margin-bottom: 15px;
+    }
+    .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    }
+    .input-group input[type="text"],
+    .input-group input[type="email"],
+    .input-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    }
+    .button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: solid 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    }
+    .button:hover {
+    background-color: #45a049;
+    }
+ .form-container
+  h2 Project Submission Form
+  form(action='/studentproject/add_studentproject' method='post' enctype='multipart/form-data')
+  div.input-group 
+    .input-group
+      label(for='first-name') First Name:
+      input#first-name(type='text' name='first_name' required='')
+    .input-group
+      label(for='middle-name') Middle Name:
+      input#middle-name(type='text' name='middle_name')
+    .input-group
+      label(for='surname') Surname:
+      input#surname(type='text' name='surname' required='')
+    .input-group
+      label(for='reg-number') Registration Number:
+      input#reg-number(type='text' name='registration_no' required='')
+    .input-group
+      label(for='email') Email:
+      input#email(type='email' name='email' required='')
+    .input-group
+      label(for='project-title') Project Title:
+      input#project-title(type='text' name='tittle' required='')
+    .input-group
+      label(for='project-doc') Project Documentation (PDF):
+      input#project-doc(type='file' name='documentation' accept='.pdf' required='')
+    .input-group
+      label(for='supervisor-name') Name of Supervisor:
+      input#supervisor-name(type='text' name='superviser_id' required='')
+    button(type='submit') Submit
