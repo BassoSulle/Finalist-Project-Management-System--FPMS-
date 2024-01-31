@@ -5,8 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;
-    background-image: url('/image/background.png');
+    background-color:#e6f7ff;
+    background-image: url('image/background.png');
 }
 
 .container {
@@ -20,7 +20,7 @@ h1 {
 }
 
 .sign-in-button {
-    background-color: #333;
+    background-color: #008bcc;
     color: #fff;
     padding: 15px 30px;
     border: none;
