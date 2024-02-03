@@ -1,16 +1,15 @@
-const express = require('express')
-const router = express.Router()
-const bodyParser = require('body-parser');
-const connection = require('../database')
+const express = require('express');
+const router = express.Router();
+const connection = require('../database');
 
 router.get('/', function(req, res){
-   res.render('studentproject')
+   res.render('studentproject');
 });
 
-router.post('/add_studentproject',function (req, res){
+router.post('/', function (req, res){
    console.log(req.body);
 
-   const query ="INSERT INTO student_project VALUES (null, ?,?,?,?,?,?,?,?)";
+   const query ="insert into student_project values (null, ?,?,?,?,?,?,?,?)";
    const values = [
       req.body.first_name,
       req.body.middle_name || null,
@@ -19,24 +18,17 @@ router.post('/add_studentproject',function (req, res){
       req.body.email,
       req.body.tittle,
       req.body.documentation,
-      req.body.superviser_id,
+      req.body.superviser_id
    ];
+   
    connection.query(query, values, function(error){
-      if(error) 
-      {
-         throw error;
+      if(error) {
+         console.error(error);
+         return res.status(500).send('Error in saving data to database');
+      } else {
+         res.render('studentproject');
       }
-      else
-      {
-         res.redirect('viewproject')
-      }
-
-   })
-   connection.end();
-
+   });
 });
-
-
-
 
 module.exports=router;

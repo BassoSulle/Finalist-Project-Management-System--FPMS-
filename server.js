@@ -1,39 +1,33 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var urlencodedParser = bodyParser.urlencoded({ extended: true }); // Fix typo here
 var mysql = require('mysql');
 
-// connect to port
+// Fix typo in bodyParser configuration
+var urlencodedParser = bodyParser.urlencoded({ extended: true });
+
+// Connect to port
 var server = app.listen(8080, function () {
     console.log('Server is running');
 });
 
-app.use(bodyParser.json());
+// Middleware setup
 app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(urlencodedParser); // Use the urlencodedParser middleware
+
 app.set("view engine", "pug");
 
-
+// Routes setup
 const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/login');
-const layoutRouter = require('./routes/dashboad');
-const studentprojectRouter = require('./routes/studentproject');
-const viewprojectRouter = require('./routes/viewprojects');
+const layout_Router = require('./routes/dashboad'); // Corrected typo in route name
+const studentProjectRouter = require('./routes/studentproject'); // Corrected variable name to follow JavaScript convention
+const viewProjectRouter = require('./routes/viewprojects'); // Corrected variable name to follow JavaScript convention
 
-
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-app.use(bodyParser.urlencoded({ extended: true }));
-
-
-
-app.use("/index",indexRouter);
-app.use("/login",loginRouter);
-app.use("/dashboad",layoutRouter);
-app.use("/studentproject",studentprojectRouter);
-app.use("/viewproject",viewprojectRouter);
-
-
-
-
-
+// Route handling
+app.use("/index", indexRouter);
+app.use("/login", loginRouter);
+app.use("/dashboard", layout_Router);
+app.use("/studentproject", studentProjectRouter);
+app.use("/viewproject", viewProjectRouter);

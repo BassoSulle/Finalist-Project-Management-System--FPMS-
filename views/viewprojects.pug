@@ -1,47 +1,47 @@
-extends layouts/dashboad 
+//- extends layouts/dashboad 
 
-block content 
-doctype html
-head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Student Project Information
-h2 Student Information
-table(border='1')
-  thead
-    tr
-      th Name of Student
-      th Registration Number
-      th Email
-      th Project Title
-      th Project Documentation
-      th Name of Supervisor
-  tbody#studentData
+
+//- block content 
+//- doctype html
+//- head
+//-   meta(charset='UTF-8')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//-   title Student Project Information
+//- h2 Student Information
+//- table(border='1')
+//-   thead
+//-     tr
+//-       th Name of Student
+//-       th Registration Number
+//-       th Email
+//-       th Project Title
+//-       th Project Documentation
+//-       th Name of Supervisor
+//-   tbody#studentData
    
-script.
-  // JavaScript code to retrieve data from the database using Node.js
-  const fetchStudentData = async () => {
-  try {
-  const response = await fetch('/api/students'); // Assuming the endpoint to retrieve student data is '/api/students'
-  const data = await response.json();
-  const studentDataElement = document.getElementById('studentData');
-  studentDataElement.innerHTML = '';
-  data.forEach(student => {
-  const row = document.createElement('tr');
-  row.innerHTML = `
-  <td>${student.name}</td>
-  <td>${student.registrationNumber}</td>
-  <td>${student.email}</td>
-  <td>${student.projectTitle}</td>
-  <td>${student.projectDocumentation}</td>
-  <td>${student.supervisorname}</td>
-  `;
-  studentDataElement.appendChild(row);
-  });
-  } catch (error) {
-  console.error('Error fetching student data:', error);
-  }
-  };
-  // Call the function to fetch student data when the page loads
-  window.onload = fetchStudentData;
-
+//- script.
+//-   // JavaScript code to retrieve data from the database using Node.js
+//-   const fetchStudentData = async () => {
+//-   try {
+//-   const response = await fetch('/api/students'); // Assuming the endpoint to retrieve student data is '/api/students'
+//-   const data = await response.json();
+//-   const studentDataElement = document.getElementById('studentData');
+//-   studentDataElement.innerHTML = '';
+//-   data.forEach(student => {
+//-   const row = document.createElement('tr');
+//-   row.innerHTML = `
+//-   <td>${student.name}</td>
+//-   <td>${student.registrationNumber}</td>
+//-   <td>${student.email}</td>
+//-   <td>${student.projectTitle}</td>
+//-   <td>${student.projectDocumentation}</td>
+//-   <td>${student.supervisorname}</td>
+//-   `;
+//-   studentDataElement.appendChild(row);
+//-   });
+//-   } catch (error) {
+//-   console.error('Error fetching student data:', error);
+//-   }
+//-   };
+//-   // Call the function to fetch student data when the page loads
+//-   window.onload = fetchStudentData;
