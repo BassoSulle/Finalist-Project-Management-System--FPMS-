@@ -26,7 +26,7 @@ router.post('/', function (req, res){
          console.error(error);
          return res.status(500).send('Error in saving data to database');
       } else {
-         res.render('studentproject');
+         res.redirect('viewproject');
       }
    });
 });
