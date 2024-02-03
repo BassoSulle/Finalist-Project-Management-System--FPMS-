@@ -62,4 +62,8 @@ Contributing
 Contributions to the Finalist Student Management System are welcome! If you have any suggestions, enhancements, or bug fixes, please open an issue or create a pull request.
 License
 
+<<<<<<< HEAD
 This project is licensed under the MIT License.
+=======
+This project is licensed under the MIT License.
+>>>>>>> origin/george
