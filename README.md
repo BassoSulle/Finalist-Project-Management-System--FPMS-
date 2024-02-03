@@ -1,4 +1,4 @@
-![image](https://github.com/BassoSulle/Finalist-Project-Management-System--FPMS-/assets/104014821/aef8c670-bff5-4063-95d3-3f6cf344d51c)**Finalist Student Management System**
+**Finalist Student Management System**
 
 Welcome to the Finalist Student Management System! This system is designed to allow students to register their information and project details, as well as view the information they have registered.
 This README file provides an overview of the system, instructions for setup and usage, and other relevant information.
