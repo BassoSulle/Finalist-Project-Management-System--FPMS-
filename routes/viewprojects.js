@@ -6,7 +6,7 @@ router.get('/',(req, res) => {
     res.render("viewprojects");
 });
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     console.log(req.body)
     
     const sql = 'SELECT * FROM student_project';
