@@ -31,9 +31,9 @@ npm install
 **Set Up Database:**
 
     Create a MySQL database for the project.
-    Update the database configuration in config/database.js file with your database credentials.
+    Update the database configuration in config/database.js file with  database credentials.
 
-Run the Application:
+**Run the Application:**
 
 sql
 
@@ -62,8 +62,15 @@ Contributing
 Contributions to the Finalist Student Management System are welcome! If you have any suggestions, enhancements, or bug fixes, please open an issue or create a pull request.
 License
 
-<<<<<<< HEAD
+
 This project is licensed under the MIT License.
-=======
-This project is licensed under the MIT License.
->>>>>>> origin/george
+
+
+
+**Lnading page look**
+![Screenshot 2024-02-03 081133](https://github.com/BassoSulle/Finalist-Project-Management-System--FPMS-/assets/104014821/6c99374a-67d9-4fc5-8b12-fc24a9a303b6)
+
+
+
+
+
